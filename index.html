@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PaneerHouse - Fresh Indian Veg Food</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="PaneerHouse Logo">
+      <div class="brand-info">
+        <h1>Paneer House</h1>
+        <p>123 Flavor Street, Food City, FC 12345</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#" class="order-now">Order Now</a>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-menu">
+        <a href="#" class="active">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="slideshow">
+    <div class="slides">
+      <img src="image1.jpg" class="active" alt="Paneer Dish 1">
+      <img src="image2.jpg" alt="Paneer Dish 2">
+      <img src="image5.jpeg" alt="Paneer Dish 3">
+    </div>
+  </div>
+
+  <section class="about-section">
+    <h2>Welcome to Paneer House</h2>
+    <p>At Paneer House, we craft 100% vegetarian dishes with homemade pure paneer and handpicked spices, delivering authentic Indian flavors with love and care.</p>
+  </section>
+
+  <footer>
+    <div class="footer-social">
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © 2025 Paneer House. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slides img');
+
+    function showNextSlide() {
+      slides[slideIndex].classList.remove('active');
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 3000);
+
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
